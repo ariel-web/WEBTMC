@@ -1,38 +1,48 @@
 <template>
-  <v-app class="app" >
+  <v-app class="app">
     <div
       v-if="pos === 'uno'"
-      style="z-index: 99; display:flex; justify-content:center; aling-items:center;"
+      style="z-index: 99; display: flex; justify-content: center"
       v-scroll="handleScroll"
       class="navbar"
-
     >
-      <v-container>
-        <div class="barrar_menu" style="color: blue; box-shadow: none">
-          <div class="d-flex align-center;" style="display:flex; justify-content:center;" v-scroll="handleScroll3" >
+      <v-container class="containerbg">
+        <div class="barrar_menu text-md-right" style="color: blue; box-shadow: none; ">
+          <div
+            class="d-flex align-center; "
+            style="display: flex; justify-content: center; background:none; width:100px; "
+          >
             <router-link to="/">
               <v-img
                 alt="Vuetify Logo"
-                class="shrink"
-                style="margin-left: -20px"
                 contain
                 v-bind:src="require('../assets/imagenes/logoTMC.png')"
                 transition="scale-transition"
-                width="100px"
+                class="imgLogo"
               />
             </router-link>
+              <div style="position:absolute; bottom:0; font-size:0.8rem; color:white;">
+                <span>TMC INTEGRAL SAC</span>
+              </div>
           </div>
 
-          <v-list dense flat class="d-none d-md-block" v-scroll="handleScroll2" >
-            <v-list-item-group class="d-flex" style="background: transparent" >
+          <v-list
+            dense
+            flat
+            class="d-none d-md-block right"
+          >
+            <v-list-item-group
+              class="d-flex"
+              style="background: transparent; align: right"
+            >
               <v-list-item to="/">
-                <v-list-item-content> Cronograma </v-list-item-content>
+                <v-list-item-content class="white--text"> INICIO </v-list-item-content>
               </v-list-item>
 
               <v-menu open-on-hover bottom offset-y>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-list-item v-bind="attrs" v-on="on" >
-                    <v-list-item-content>Actividades</v-list-item-content>
+                  <v-list-item v-bind="attrs" v-on="on" href="/#actividades">
+                    <v-list-item-content class="white--text"> NOSOTROS </v-list-item-content>
                   </v-list-item>
                 </template>
 
@@ -49,7 +59,7 @@
               <v-menu open-on-hover bottom offset-y>
                 <template v-slot:activator="{ on, attrs }">
                   <v-list-item v-bind="attrs" v-on="on">
-                    <v-list-item-content>Concursos</v-list-item-content>
+                    <v-list-item-content class="white--text" >SERVICIOS</v-list-item-content>
                   </v-list-item>
                 </template>
 
@@ -66,26 +76,14 @@
               </v-menu>
 
               <v-list-item href="/#colaboradores">
-                <v-list-item-content> Colaboradores </v-list-item-content>
+                <v-list-item-content class="white--text"> EXPERIENCIA </v-list-item-content>
               </v-list-item>
               <v-list-item href="/embajadores">
-                <v-list-item-content > Embajadores </v-list-item-content>
+                <v-list-item-content class="white--text"> CLIENTES </v-list-item-content>
               </v-list-item>
             </v-list-item-group>
           </v-list>
-          <div class="menu_especial d-none d-md-block" v-scroll="handleScroll2" >
-            <v-btn
-              href="https://participante.coneimera.org/registro"
-              target="_blanck"
-              height="100%"
-              dark
-              large
-              text
-              link
-            >
-              INSCRIPCIONES
-            </v-btn>
-          </div>
+
           <v-btn
             icon
             class="d-block d-md-none mr-3"
@@ -97,13 +95,12 @@
       </v-container>
     </div>
 
-
     <v-navigation-drawer
       v-model="menu_drawer"
-      fixed
+      absolute
       right
       class="d-md-none"
-      style="z-index: 999"
+      style="z-index: 999;"
     >
       <v-row justify="end">
         <v-col cols="12" class="d-flex justify-end pr-3">
@@ -192,6 +189,9 @@
     <v-footer id="footer" dark>
       <v-container>
         <div class="titulo-container">
+
+
+
           <div class="separador"></div>
           <div class="titulo white--text">Participar</div>
         </div>
@@ -303,74 +303,55 @@ export default {
   },
   methods: {
     handleScroll: function (evt, el) {
-      if (window.scrollY > 2) {
+      if (window.scrollY > 2 && window.innerWidth>600) {
         el.setAttribute(
           "style",
-          "background:white;",
-          this.barracolor= "white",
+          "background:black; border-bottom:solid 5px red; ",
         );
       }
-      if (window.scrollY < 1) {
+      if (window.scrollY < 1 && window.innerWidth>600) {
         el.setAttribute(
           "style",
-          "background:transparent; transform: translate3d(0, -10px, 0)",
-          this.barracolor= "transparent",
+          "background:transparent; transition: opacity 0.3s, visibility 0.3s;"
         );
       }
       //return window.scrollY > 100;
     },
-    handleScroll2: function (evt, el) {
+  /*   handleScroll2: function (evt, el) {
       if (window.scrollY > 1) {
-        el.setAttribute(
-          "style",
-          "transition: opacity 2.6s;",
-        );
+        el.setAttribute("style", "transition: opacity 2.6s;",);
       }
       if (window.scrollY < 1) {
         el.setAttribute(
           "style",
-          "background:transparent; transition: opacity 2.6s; margin-top: 30px;",
-         );
+          "background:transparent; transition: opacity 2.6s; margin-top: 30px; color:white;"
+        );
       }
       //return window.scrollY > 100;
     },
     handleScroll3: function (evt, el) {
       if (window.scrollY > 1) {
-        el.setAttribute(
-          "style",
-          "transition: opacity 1.6s;",
-        );
+        el.setAttribute("style", "transition: opacity 1.6s;");
       }
       if (window.scrollY < 1) {
-        el.setAttribute(
-          "style",
-          "background:transparent; margin-top: 5px;",
-         );
+        el.setAttribute("style", "background:transparent; margin-top: 5px;");
       }
       //return window.scrollY > 100;
     },
     handleScroll4: function (evt, el) {
       if (window.scrollY > 1) {
-        el.setAttribute(
-          "style",
-          "transition: opacity 1.6s;",
-        );
+        el.setAttribute("style", "transition: opacity 1.6s;");
       }
       if (window.scrollY < 1) {
-        el.setAttribute(
-          "style",
-          "background:transparent; margin-top: 20px;",
-         );
+        el.setAttribute("style", "background:transparent; margin-top: 20px;");
       }
       //return window.scrollY > 100;
-    },
+    }, */
   },
 
   data: () => ({
     menu_drawer: false,
     pos: "uno",
-    barracolor: "transparent",
-    barracolor2: "transparent",
 
     menu_items: [
       { nombre: "Cronograma", ruta: "/", sub_menu: null }, //falta
@@ -418,10 +399,15 @@ export default {
   max-width: 100vw;
   width: 100%;
   z-index: 1;
-}
-.navbar .v-list{
 
+}
+.navbar .v-list {
   background: transparent;
+  color:white;
+}
+
+.list-item-content {
+  color:white;
 }
 
 .navbar .v-list-item:hover,
@@ -444,42 +430,37 @@ export default {
   -moz-box-shadow: 0px 2px 13px -1px rgba(46, 46, 46, 0.56);
   box-shadow: 0px 2px 13px -1px rgba(46, 46, 46, 0.56);
 }
-.barrar_menu .menu_especial {
-  background: #035159;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 61.5px;
-  -webkit-box-shadow: 0px 2px 13px -1px rgba(46, 46, 46, 0.56);
-  -moz-box-shadow: 0px 2px 13px -1px rgba(46, 46, 46, 0.56);
-  box-shadow: 0px 2px 13px -1px rgba(46, 46, 46, 5.56);
-}
-.barrar_menu .menu_especial:hover {
-}
 
-.titulo-container {
-  width: 100%;
-  padding-top: 70px;
-  z-index: 1;
-  color: initial;
+.imgLogo {
+  margin-left:0px;
+  height: 60px;
 }
-.titulo-container .separador {
-  width: 70px;
-  background: #035159;
-  margin: auto;
+.containerbg{
+  background:none;
 }
 
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
+@media (max-width: 600px) {
 
-@media (max-width: 480px) {
-}
+  .barrar_menu {
+    background: white;
+    height: 50px;
+    width: 100%;
+    -webkit-box-shadow: 0px 2px 13px -1px rgba(46, 46, 46, 0.56);
+    -moz-box-shadow: 0px 2px 13px -1px rgba(46, 46, 46, 0.56);
+    box-shadow: 0px 2px 13px -1px rgba(46, 46, 46, 0.56);
+  }
+  .imgLogo {
+    margin-left: 0px;
+    height: 50px;
 
+  }
+  .containerbg{
+    margin:0px;
+    padding: 5px;
+    background:white;
+
+  }
+
+}
 </style>

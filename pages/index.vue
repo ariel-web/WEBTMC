@@ -1,11 +1,16 @@
 <template>
   <div justify="center" align="center">
-    <Inicio/>
+    <div style=" margin-bottom:-12px; ">
+      <Inicio/>
+    </div>
+
+    <v-section class="sectionIndex" id="actividades">
     <template>
       <v-parallax
         src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
       ></v-parallax>
     </template>
+    </v-section>
     <h1 class="centered">Scroll me</h1>
     <div v-scroll="handleScroll" class="box">
       <p>
@@ -51,7 +56,7 @@ export default {
       if (window.scrollY > 50) {
         el.setAttribute(
           "style",
-          "opacity: 1; transform: translate3d(0, -10px, 0)"
+          "opacity: 1; transform: translate3d(0, -10px, 0);"
         );
       }
       //return window.scrollY > 100;
@@ -69,7 +74,12 @@ export default {
 </script>
 
 <style>
+.sectionIndex[id] {
+  scroll-margin-top: 110px;
+}
 
-
+html{
+  scroll-behavior: smooth;
+}
 
 </style>
