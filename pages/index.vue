@@ -1,24 +1,18 @@
 <template>
   <div justify="center" align="center">
-    <div style=" margin-bottom:-12px; ">
-      <Inicio/>
+    <div style="margin-bottom: -12px">
+      <Inicio />
     </div>
 
     <v-section class="sectionIndex" id="actividades">
-    <template>
-      <v-parallax
-        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-      ></v-parallax>
-    </template>
+      <template>
+        <v-parallax
+
+        ></v-parallax>
+      </template>
     </v-section>
-    <h1 class="centered">Scroll me</h1>
-    <div v-scroll="handleScroll" class="box">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque amet
-        harum aut ab veritatis earum porro praesentium ut corporis. Quasi
-        provident dolorem officia iure fugiat, eius mollitia sequi quisquam.
-      </p>
-    </div>
+
+
     <template>
       <v-parallax height="300" src="">
         <div v-for="item in posts" v-bind:key="item.id">
@@ -32,18 +26,32 @@
       <v-parallax
         height="300"
         src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
-      ></v-parallax>
+      >
+
+      </v-parallax>
     </template>
+
+        <v-section >
+      <div style="padding-top:20px;">
+        <span class="titleSection">PROYECTOS FINALIZADOS</span>
+        <hr class="lineahr">
+      </div>
+      <ProyectosTerminados />
+    </v-section>
+
   </div>
 </template>
 <script>
 import axios from "axios";
 import Post from "../components/Post.vue";
 import Inicio from "../components/inicio";
+import ProyectosTerminados from "../components/inicio/ProyectosTerminados.vue";
+
 export default {
   components: {
     Post: Post,
     Inicio: Inicio,
+    ProyectosTerminados: ProyectosTerminados,
   },
   data() {
     return {
@@ -78,8 +86,21 @@ export default {
   scroll-margin-top: 110px;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
+.titleSection {
+  font-size: 2rem;
+  color: black;
+  font-weight: 700;
 
+}
+.lineahr {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  height: 0.4rem;
+  width: 130px;
+  background-color: red;
+  border: none;
+}
 </style>

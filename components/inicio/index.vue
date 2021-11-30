@@ -22,15 +22,6 @@
           {
             src: 'http://www.constructoraoviedo.com/wp-content/uploads/cable-via-12-960x430.jpg',
           },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
         ],
       }
     },
