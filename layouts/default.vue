@@ -16,7 +16,7 @@
               <v-img
                 alt="Vuetify Logo"
                 contain
-                v-bind:src="require('../assets/imagenes/logoTMC.png')"
+                v-bind:src="require('../assets/imagenes/TMCLOGO.png')"
                 transition="scale-transition"
                 class="imgLogo"
               />
@@ -36,7 +36,7 @@
               style="background: transparent; align: right"
             >
               <v-list-item to="/">
-                <v-list-item-content class="white--text"> INICIO </v-list-item-content>
+                <v-list-item-content > INICIO </v-list-item-content>
               </v-list-item>
 
               <v-menu open-on-hover bottom offset-y>

@@ -5,11 +5,13 @@
     </div>
 
     <v-section class="sectionIndex" id="actividades">
-      <template>
-        <v-parallax
-
-        ></v-parallax>
-      </template>
+      <div style="padding-top:20px;">
+        <span class="titleSection">NUESTRA EMPRESA</span>
+        <hr class="lineahr">
+      </div>
+      <div class="container">
+        <Nosotros/>
+      </div>
     </v-section>
 
 
@@ -31,7 +33,7 @@
       </v-parallax>
     </template>
 
-        <v-section >
+    <v-section >
       <div style="padding-top:20px;">
         <span class="titleSection">PROYECTOS FINALIZADOS</span>
         <hr class="lineahr">
@@ -45,12 +47,14 @@
 import axios from "axios";
 import Post from "../components/Post.vue";
 import Inicio from "../components/inicio";
+import Nosotros from "../components/inicio/Nosotros.vue";
 import ProyectosTerminados from "../components/inicio/ProyectosTerminados.vue";
 
 export default {
   components: {
     Post: Post,
     Inicio: Inicio,
+    Nosotros:Nosotros,
     ProyectosTerminados: ProyectosTerminados,
   },
   data() {
@@ -90,16 +94,16 @@ html {
   scroll-behavior: smooth;
 }
 .titleSection {
-  font-size: 2rem;
+  font-size: 2.7rem;
   color: black;
-  font-weight: 700;
+  font-weight: 300;
 
 }
 .lineahr {
-  margin-top: 1rem;
+  margin-top: 0.2rem;
   margin-bottom: 2rem;
-  height: 0.4rem;
-  width: 130px;
+  height: 0.25rem;
+  width: 160px;
   background-color: red;
   border: none;
 }
