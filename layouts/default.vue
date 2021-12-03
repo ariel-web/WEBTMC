@@ -198,7 +198,7 @@
           <v-col cols="6" sm="4" class="mx-auto">
             <v-btn
               link
-              href="https://participante.coneimera.org/registro"
+              href="#"
               block
               color="red"
               large

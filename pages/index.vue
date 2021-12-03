@@ -6,7 +6,7 @@
 
     <v-section class="sectionIndex" id="actividades">
       <div style="padding-top:20px; padding-bottom:20px;">
-        <span class="titleSection">NUESTRA EMPRESA</span>
+        <span class="titleSection">Nuestra Empresa</span>
         <hr class="lineahr">
       </div>
       <div class="container">
@@ -57,7 +57,7 @@
 
     <v-section >
       <div style="padding-top:20px;">
-        <span class="titleSection">PROYECTOS FINALIZADOS</span>
+        <span class="titleSection">Proyectos Finalizados</span>
         <hr class="lineahr">
       </div>
       <ProyectosTerminados />
@@ -118,7 +118,7 @@ html {
   scroll-behavior: smooth;
 }
 .titleSection {
-  font-size: 2.7rem;
+  font-size: 2.3rem;
   color: black;
   font-weight: 300;
 
