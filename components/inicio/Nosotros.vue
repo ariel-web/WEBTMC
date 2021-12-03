@@ -29,6 +29,7 @@
               comerciales, respondiendo en de manera profesional Y trabajando en
               equipo con nuestros clientes para resolver y crear proyectos que superen
               sus expectativas, convirtiendo grandes ideas en grandes construcciones.
+              sus expectativas, convirtiendo grandes ideas en grandes construcciones.
             </p>
          </div>
       </div>
@@ -44,7 +45,12 @@
       <div style=";  padding:1rem;" >
         <div style="display:flex;" >
           <div>
-            <button style=" background:#b2b0b0; border-radius:8px; border: solid 1px grey; color:black; padding:5px 15px 5px 15px;">Ver más</button>
+            <router-link to="/nosotros">
+            <button style=" background:#b2b0b0; border-radius:8px; border: solid 1px grey; color:black; padding:5px 15px 5px 15px;">
+
+              Ver más
+            </button>
+            </router-link>
           </div>
           <div>
             <button style=" margin-left:20px; background:red; border-radius:8px; border: solid 1px grey; padding:5px 15px 5px 15px; color:white;" >Descargar CV</button>

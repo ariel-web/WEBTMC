@@ -111,7 +111,7 @@
       </v-row>
       <v-list>
         <v-list-item color="transparent" link to="/">
-          <v-list-item-title class="black--text">Cronograma</v-list-item-title>
+          <v-list-item-title class="black--text">Inicio</v-list-item-title>
         </v-list-item>
 
         <v-list-group no-action color="grey">
@@ -193,7 +193,6 @@
 
 
           <div class="separador"></div>
-          <div class="titulo white--text">Participar</div>
         </div>
         <v-row class="mx-auto w-75" justify="center">
           <v-col cols="6" sm="4" class="mx-auto">
@@ -201,9 +200,9 @@
               link
               href="https://participante.coneimera.org/registro"
               block
-              color="pimario"
+              color="red"
               large
-              >REGISTRATE AQUÍ</v-btn
+              >ENVIAME UN MENSAJE</v-btn
             >
           </v-col>
         </v-row>
@@ -214,13 +213,14 @@
           <v-col cols="12" sm="6" md="4">
             <v-row>
               <v-col cols="12" md="12">
-                <v-img class="mx-auto" src="@/assets/logo.png" width="75%" />
+                <v-img class="mx-auto" v-bind:src="require('../assets/imagenes/logTMC.png')" width="60%" />
+
               </v-col>
               <v-col cols="12" md="12">
                 <p class="text-sm-body-2">
-                  XXVII Congreso Nacional y Exposición Internacional de
-                  Ingeniería Mecánica, Mecatrónica, Eléctrica, Electrónica y
-                  Ramas Afines.
+                  Tecnologia en Mega Construccion Integral Sociedad
+                  Anonima Cerrada | Tmc Integral Sac.
+                  CONTRATISTAS GENERALES
                 </p>
               </v-col>
             </v-row>
@@ -354,35 +354,31 @@ export default {
     pos: "uno",
 
     menu_items: [
-      { nombre: "Cronograma", ruta: "/", sub_menu: null }, //falta
-      { nombre: "Minicursos", ruta: "/minicursos" },
-      { nombre: "Ponencias", ruta: "/ponencias" },
+      { nombre: "Inicio", ruta: "#", sub_menu: null }, //falta
+      { nombre: "Nosotros", ruta: "#" },
+      { nombre: "Servicios", ruta: "#" },
       {
-        nombre: "Concursos",
-        ruta: "/concursos",
+        nombre: "Experiencia",
+        ruta: "#",
       },
-      { nombre: "Embajadores", ruta: "/embajadores", sub_menu: null },
+      { nombre: "Representantes", ruta: "#", sub_menu: null },
 
       //{ nombre: "Meza Redonda", ruta: "/", sub_menu: null },
       //{ nombre: "Paneles", ruta: "/", sub_menu: null },
     ],
     contacto_items: [
-      { nombre: "Puno- echenique 1958", ruta: "", icono: "mdi-map-marker" },
-      { nombre: "info@coneimera.org", ruta: "", icono: "mdi-mail" },
-      { nombre: "+51 914466410", ruta: "", icono: "mdi-whatsapp" },
+      { nombre: "Ilave - Av. el niño 541", ruta: "", icono: "mdi-map-marker" },
+      { nombre: "tmc.integral@gmail.com", ruta: "", icono: "mdi-mail" },
+      { nombre: "+51 968291919", ruta: "", icono: "mdi-whatsapp" },
+      { nombre: "+51 948035990", ruta: "", icono: "mdi-phone" },
       {
         nombre: "Facebook",
-        ruta: "https://www.facebook.com/Coneimera2021",
+        ruta: "https://www.facebook.com/tmcintegral",
         icono: "mdi-facebook",
       },
       {
-        nombre: "LinkedIn",
-        ruta: "https://www.linkedin.com/company/coneimera/",
-        icono: "mdi-linkedin",
-      },
-      {
         nombre: "Instagram",
-        ruta: "https://www.instagram.com/p/CLC06PWJ4dh/?igshid=arkzybbe578b",
+        ruta: "https://www.facebook.com/tmcintegral",
         icono: "mdi-instagram",
       },
     ],
