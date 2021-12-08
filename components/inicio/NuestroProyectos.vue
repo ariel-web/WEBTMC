@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col
-      v-for="n in 9"
+      v-for="n in 6"
       :key="n"
       class="d-flex child-flex"
       cols="4"

@@ -14,7 +14,8 @@
             align-items: end;
             justify-content: center;
             margin-left: -20px;
-            background: linear-gradient(60deg, #000000, transparent 85%);
+            margin-right: -20px;
+            background: #0000007d;
           "
         >
           <div>
