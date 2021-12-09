@@ -2,8 +2,12 @@
   <div
         style="padding-top: 20px; padding-bottom: 20px; background: #000000e9"
       >
+        <v-col cols="12" style="color:white;">
+          <h1 style="font-weight:300; font-size:2.4rem; margin-top:10px; margin-bottom:20px;">Comprometidos con el medio ambiente</h1>
+        </v-col>
         <v-row>
-        <div class="container div-ambiente">
+        <div class="container div-ambiente" style="margin-bottom:20px;">
+
           <v-col
             class="d-flex child-flex text-white"
             cols="12"
@@ -61,7 +65,7 @@
             md="2"
           >
             <img
-              height="170"
+              height="150"
               width="260"
               v-bind:src="require('../../assets/imagenes/hoja.png')"
             />

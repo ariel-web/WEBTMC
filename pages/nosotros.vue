@@ -19,12 +19,21 @@
           "
         >
           <div>
-            <span
-              class="titleSection"
-              style="color: white; font-size: 3.7rem; font-weight: 300"
-              >Nosotros</span
-            >
-            <hr class="lineahr" style="margin-left: 20px" />
+            <div style=" display: flex; justify-content:center;">
+              <span
+                class="titleSection"
+                style="
+                  color: white;
+                  font-size: 2.7rem;
+                  font-weight: 300;
+                  padding-bottom: 20px;
+                "
+                >Nosotros</span
+              >
+            </div>
+            <div style="margin-top:-20px; display: flex;justify-content:center;">
+              <hr class="lineahr" />
+            </div>
           </div>
         </div>
       </v-parallax>

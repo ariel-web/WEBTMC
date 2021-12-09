@@ -38,7 +38,7 @@
 
               <v-menu open-on-hover bottom offset-y>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-list-item v-bind="attrs" v-on="on" >
+                  <v-list-item v-bind="attrs" v-on="on"  href="/" >
                     <v-list-item-content class="white--text"> Inicio </v-list-item-content>
                   </v-list-item>
 
@@ -74,8 +74,8 @@
                 </template>
 
                 <v-list>
-                  <v-list-item link href="/concursos/#destreza">
-                    <v-list-item-title>Concurso de Destreza</v-list-item-title>
+                  <v-list-item link href="/proyectosterminados">
+                    <v-list-item-title>Proyectos Terminados</v-list-item-title>
                   </v-list-item>
                   <v-list-item link href="/concursos/#investigacion">
                     <v-list-item-title
