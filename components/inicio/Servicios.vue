@@ -13,8 +13,8 @@
   >
     <div class="container">
       <span
-        class="titleSection"
-        style="color: white; font-size: 2.7rem; font-weight: 300"
+        class=""
+        style="color: white; font-size: 2.7rem; font-weight: 300; margin-bottom:w0px;"
         >Nuestros servicios</span
       >
       <p style="font-size: 1rem">
@@ -55,12 +55,20 @@
         </template>
       </v-row>
 
-      <button
+        <v-btn
+          v-click-outside="onClickOutside"
+          :color="'#0000009d'"
+          :dark="active"
+          @click="active = true"
+          style="margin-top: 40px;
+          margin-bottom: 0px;
+          padding: 20px 35px 20px 35px;
+          border: solid #0000004d 1px;
+          "
 
-        style="background: #0000009d; margin-top: 40px; margin-bottom: 0px; padding: 10px 20px 10px 20px"
-      >
-        ver más
-      </button>
+        >
+        <span  class="text-lowercase" style="color:white;">ver mas</span>
+        </v-btn>
     </div>
   </div>
 </template>
@@ -68,6 +76,7 @@
 export default {
   data() {
     return {
+      active: false,
       items: [
         {
           text: `Ejecución de obras integrales`,
@@ -88,6 +97,11 @@ export default {
       ],
       transparent: "rgba(255, 255, 255, 0)",
     };
+  },
+  methods: {
+        onClickOutside () {
+          this.active = false
+        },
   },
 };
 </script>
@@ -115,4 +129,6 @@ export default {
   background: #ffffff5b;
   border: solid 4px #ffffff3d;
 }
+
+
 </style>

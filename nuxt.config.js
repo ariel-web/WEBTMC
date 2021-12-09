@@ -9,7 +9,7 @@ export default {
     titleTemplate: '%s - WEBTMC',
     title: 'WEBTMC',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'es'
     },
     meta: [
       { charset: 'utf-8' },

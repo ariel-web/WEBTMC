@@ -36,7 +36,7 @@
     </v-col>
   </v-row>
 
-    <v-row no-gutters style="background:#000000d2; padding:0.8rem 0px">
+    <v-row no-gutters style="background:#00000000; padding:0.8rem 0px">
     <v-col cols="12" sm="6" md="4">
       <div style="height:100%;">
       </div>
@@ -47,7 +47,6 @@
           <div>
             <router-link to="/nosotros">
             <button style=" background:#b2b0b0; border-radius:8px; border: solid 1px grey; color:black; padding:5px 15px 5px 15px;">
-
               Ver más
             </button>
             </router-link>

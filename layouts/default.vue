@@ -35,14 +35,24 @@
               class="d-flex"
               style="background: transparent; align: right"
             >
-              <v-list-item to="/">
-                <v-list-item-content > INICIO </v-list-item-content>
-              </v-list-item>
+
+              <v-menu open-on-hover bottom offset-y>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-list-item v-bind="attrs" v-on="on" >
+                    <v-list-item-content class="white--text"> Inicio </v-list-item-content>
+                  </v-list-item>
+
+                </template>
+
+
+              </v-menu>
+
+
 
               <v-menu open-on-hover bottom offset-y>
                 <template v-slot:activator="{ on, attrs }">
                   <v-list-item v-bind="attrs" v-on="on" href="/#actividades">
-                    <v-list-item-content class="white--text"> NOSOTROS </v-list-item-content>
+                    <v-list-item-content class="white--text"> Nosotros </v-list-item-content>
                   </v-list-item>
                 </template>
 
@@ -59,7 +69,7 @@
               <v-menu open-on-hover bottom offset-y>
                 <template v-slot:activator="{ on, attrs }">
                   <v-list-item v-bind="attrs" v-on="on">
-                    <v-list-item-content class="white--text" >SERVICIOS</v-list-item-content>
+                    <v-list-item-content class="white--text" >Proyectos</v-list-item-content>
                   </v-list-item>
                 </template>
 
@@ -76,12 +86,12 @@
               </v-menu>
 
               <v-list-item href="/#colaboradores">
-                <v-list-item-content class="white--text"> EXPERIENCIA </v-list-item-content>
+                <v-list-item-content class="white--text"> Experiencia </v-list-item-content>
               </v-list-item>
               <v-list-item href="/embajadores">
-                <v-list-item-content class="white--text"> CLIENTES </v-list-item-content>
+                <v-list-item-content class="white--text"> Clientes </v-list-item-content>
               </v-list-item>
-            </v-list-item-group>
+             </v-list-item-group>
           </v-list>
 
           <v-btn
@@ -190,18 +200,17 @@
       <v-container>
         <div class="titulo-container">
 
-
-
           <div class="separador"></div>
         </div>
-        <v-row class="mx-auto w-75" justify="center">
-          <v-col cols="6" sm="4" class="mx-auto">
+        <v-row justify="center">
+          <v-col cols="12" sm="4" md="3" class="mx-auto">
             <v-btn
               link
               href="#"
               block
               color="red"
               large
+              style=""
               >ENVIAME UN MENSAJE</v-btn
             >
           </v-col>
@@ -306,7 +315,7 @@ export default {
       if (window.scrollY > 2 && window.innerWidth>600) {
         el.setAttribute(
           "style",
-          "background:black; border-bottom:solid 5px red; ",
+          "background:#242526; border-bottom:solid 5px red; ",
         );
       }
       if (window.scrollY < 1 && window.innerWidth>600) {
@@ -399,7 +408,7 @@ export default {
 }
 .navbar .v-list {
   background: transparent;
-  color:white;
+  color:#ffffff;
 }
 
 .list-item-content {
